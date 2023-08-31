@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "e-commerce-drf"
+version = "0.1.0"
+description = "Исполнение технического задания для компании"
+authors = ["xander <moroz070688@gmail.com>"]
+readme = "README.md"
+packages = [{include = "e_commerce_drf"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.4"
+djangorestframework = "^3.14.0"
+drf-yasg = "^1.21.7"
+python-dotenv = "^1.0.0"
+pre-commit = "^3.3.3"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
