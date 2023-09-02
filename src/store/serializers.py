@@ -31,10 +31,8 @@ class ProductCreateSerializer(serializers.ModelSerializer):
                   'categories']
 
     def create(self, validated_data):
-        # print(validated_data)
         categories_data = validated_data.pop('categories')
         product = Product.objects.create(**validated_data)
-        # print(product)
         for category_data in categories_data:
             category_name = category_data['name']
             existed_category = Category.objects.filter(name=category_name).first()
@@ -61,6 +59,7 @@ class ProductUpdateSerializer(serializers.ModelSerializer):
                   'is_published',
                   'is_deleted']
 
+
 class ProductDeleteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
@@ -73,6 +72,7 @@ class ProductListSerializer(serializers.ModelSerializer):
     is_published = serializers.BooleanField(default=True)
     is_deleted = serializers.BooleanField(default=False, read_only=True)
     categories = CategorySerializer(many=True)
+
     class Meta:
         model = Product
         fields = '__all__'
