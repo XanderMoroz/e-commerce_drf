@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "e-commerce-drf"
 version = "0.1.0"
-description = "Исполнение технического задания для компании"
+description = "Исполнение технического задания для компании Nimax"
 authors = ["xander <moroz070688@gmail.com>"]
 readme = "README.md"
 packages = [{include = "e_commerce_drf"}]
@@ -13,6 +13,7 @@ djangorestframework = "^3.14.0"
 drf-yasg = "^1.21.7"
 python-dotenv = "^1.0.0"
 pre-commit = "^3.3.3"
+django-filter = "^23.2"
 
 
 
